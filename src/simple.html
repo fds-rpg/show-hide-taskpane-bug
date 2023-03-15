@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      async function showTaskpane(event) {
+        console.log("showTaskpane has been clicked")
+        await Office.addin.showAsTaskpane();
+        event.completed();
+        console.log("taskpane shown")
+      }
+
+      async function hideTaskpane(event) {
+        console.log("hideTaskpane has been clicked")
+        await Office.addin.hide();
+        event.completed();
+        console.log("taskpane hid")
+      }
+    </script>
+  </body>
+</html>
